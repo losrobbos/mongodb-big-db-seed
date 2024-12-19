@@ -4,7 +4,7 @@ const client = await MongoClient.connect("mongodb://localhost:27017")
 
 // createCollection is a findOrCreate operation. In case the collection exists it does not throw an error
 // do this behavior is not implemented in Mongoose. It is build into the MongoDB client itself!
-const collection = await client.db("big-db").createCollection("big-coll")
+const collection = await client.db("big-db").createCollection("bigcoll") // dont use hyphens in collection, hard to access in mongo shell!
 
 const proms = []
 let batch = []
